@@ -13,10 +13,10 @@ routerSong.route('/:id')
     .put(update);
 
 //songs/:id/:artists
-routerSong.route('/:id/:artists')
+routerSong.route('/:id/artists')
 .post(setArtist)
 
-routerSong.route('/:id/:genres')
+routerSong.route('/:id/genres')
 .post(setGenres)
 
 module.exports = routerSong;
