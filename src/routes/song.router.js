@@ -14,9 +14,9 @@ routerSong.route('/:id')
 
 //songs/:id/:artists
 routerSong.route('/:id/artists')
-.post(setArtist)
+    .post(setArtist)
 
 routerSong.route('/:id/genres')
-.post(setGenres)
+    .post(setGenres)
 
 module.exports = routerSong;

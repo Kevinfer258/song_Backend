@@ -41,8 +41,8 @@ const update = catchError(async(req, res) => {
 const setArtist = catchError(async (req, res) => {
     const {id}  =req.params
     const song = await Song.findByPk(id) 
-    await song.setGenres(req.body)
-    const artist = await song.getGenres()
+    await song.setArtist(req.body)
+    const artist = await song.getArtist()
     return res.json(artist)
 })
 
