@@ -6,9 +6,9 @@ const routerSong = require('./song.router');
 const router = express.Router();
 
 // colocar las rutas aquí
+router.use('/songs', routerSong)
 router.use('/genres', routerGenre)
 router.use('/artists', routerArtist)
 router.use('/albums', routerAlbum)
-router.use('/songs', routerSong)
 
 module.exports = router;

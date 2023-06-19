@@ -15,7 +15,7 @@ const create = catchError(async(req, res) => {
 
 const getOne = catchError(async(req, res) => {
     const { id } = req.params;
-    const result = await Song.findByPk(id);
+    const result = await Song.findByPk(id,{include:[Artist, Genre]});
     if(!result) return res.sendStatus(404);
     return res.json(result);
 });
@@ -41,8 +41,8 @@ const update = catchError(async(req, res) => {
 const setArtist = catchError(async (req, res) => {
     const {id}  =req.params
     const song = await Song.findByPk(id) 
-    await song.setArtist(req.body)
-    const artist = await song.getArtist()
+    await song.setArtists(req.body)
+    const artist = await song.getArtists()
     return res.json(artist)
 })
 
