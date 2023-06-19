@@ -9,6 +9,6 @@ const router = express.Router();
 router.use('/songs', routerSong)
 router.use('/genres', routerGenre)
 router.use('/artists', routerArtist)
-router.use('/albums', routerAlbum)
+router.use('/album', routerAlbum)
 
 module.exports = router;
